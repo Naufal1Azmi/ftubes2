@@ -89,6 +89,17 @@ import AparatursCreate from "../views/Admin/Aparaturs/Create";
 //import view aparaturs edit
 import AparatursEdit from "../views/Admin/Aparaturs/Edit";
 
+//import view AnggotaRoles index
+import AnggotaRolesIndex from "../views/Admin/AnggotaRoles/Index";
+
+//import view AnggotaRoles create
+import AnggotaRolesCreate from "../views/Admin/AnggotaRoles/Create";
+
+//import view AnggotaRoles edit
+import AnggotaRolesEdit from "../views/Admin/AnggotaRoles/Edit";
+
+
+
 //======================================================
 // view web
 //======================================================
@@ -375,6 +386,36 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <AparatursEdit />
+          </PrivateRoutes>
+        }
+      />
+
+      {/* private route "/admin/anggotaroles*/}
+      <Route
+        path="/admin/anggotaroles"
+        element={
+          <PrivateRoutes>
+            <AnggotaRolesIndex />
+          </PrivateRoutes>
+        }
+      />
+
+      {/* private route "/admin/anggotaroles/create" */}
+      <Route
+        path="/admin/anggotaroles/create"
+        element={
+          <PrivateRoutes>
+            <AnggotaRolesCreate />
+          </PrivateRoutes>
+        }
+      />
+
+      {/* private route "/admin/anggotaroles/edit" */}
+      <Route
+        path="/admin/anggotaroles/edit/:id"
+        element={
+          <PrivateRoutes>
+            <AnggotaRolesEdit />
           </PrivateRoutes>
         }
       />

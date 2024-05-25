@@ -42,6 +42,7 @@ export default function sidebar() {
           {(hasAnyPermission(["categories.index"]) ||
             hasAnyPermission(["posts.index"]) ||
             hasAnyPermission(["pages.index"]) ||
+            hasAnyPermission(["anggotaroles.index"]) ||
             hasAnyPermission(["products.index"])) && (
             <>
               <div className="sb-sidenav-menu-heading">CONTENT MANAGEMENT</div>
@@ -55,6 +56,8 @@ export default function sidebar() {
                     : activeRoute[2] === "pages"
                     ? " active-sidebar"
                     : activeRoute[2] === "products"
+                    ? " active-sidebar"
+                    : activeRoute[2] === "anggotaroles"
                     ? " active-sidebar"
                     : "")
                 }
@@ -88,6 +91,8 @@ export default function sidebar() {
                 : activeRoute[2] === "pages"
                 ? " show"
                 : activeRoute[2] === "products"
+                ? " show"
+                : activeRoute[2] === "anggotaroles"
                 ? " show"
                 : "")
             }
@@ -145,6 +150,19 @@ export default function sidebar() {
                   to="/admin/products"
                 >
                   Products
+                </Link>
+              )}
+
+              {hasAnyPermission(["anggotaroles.index"]) && (
+                <Link
+                  className={
+                    activeRoute[2] === "anggotaroles"
+                      ? "nav-link active-sidebar"
+                      : "nav-link"
+                  }
+                  to="/admin/anggotaroles"
+                >
+                  Anggota Roles
                 </Link>
               )}
             </nav>
@@ -240,6 +258,7 @@ export default function sidebar() {
                 </div>
                 Aparaturs
               </Link>
+
             </>
           )}
 

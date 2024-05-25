@@ -66,8 +66,8 @@ export default function navbar() {
   };
 
   return (
-    <nav className="sb-topnav navbar navbar-expand navbar-dark bg-green border-top-yellow shadow-sm fixed-top" style={{paddingLeft: 0,height: '56px',zIndex: '1039' }}>
-      <a className="navbar-brand ps-3 fw-bold" href="index.html">
+    <nav className="sb-topnav navbar navbar-expand navbar-dark bg-blue border-top-yellow shadow-sm fixed-top" style={{paddingLeft: 0,height: '56px',zIndex: '1039' }}>
+      <a className="navbar-brand ps-3 fw-bold">
         SALAM GENRE
       </a>
       <button

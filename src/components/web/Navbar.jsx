@@ -1,21 +1,26 @@
 import React from "react";
-
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
-  //assigning location variable
   const location = useLocation();
-
-  //destructuring pathname from location
   const { pathname } = location;
-
-  //Javascript split method to get the name of the path in array
   const activeRoute = pathname.split("/");
 
   return (
     <>
-    <nav className="navbar navbar-expand-md navbar-light navbar-blue nav-web">
+      <nav className="navbar navbar-expand-md navbar-light navbar-blue nav-web">
         <div className="container">
+          <div className="navbar-brand d-flex align-items-center">
+            <img
+              src="/images/logo-jbg.png"
+              width="45"
+              className="img-responsive"
+              alt="Logo"
+            />
+            <div className="text-white ms-2">
+              <h4 className="header-school">PP FGI SUMUT</h4>
+            </div>
+          </div>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,7 +33,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <ul className="navbar-nav me-auto mb-2 mb-md-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-md-0">
               <li className="nav-item ms-2">
                 <Link
                   className={
@@ -41,7 +46,6 @@ export default function Navbar() {
                   <i className="fa fa-home"></i> BERANDA
                 </Link>
               </li>
-
               <li className="nav-item ms-2">
                 <Link
                   className={
@@ -54,7 +58,6 @@ export default function Navbar() {
                   <i className="fa fa-info-circle"></i> TENTANG DESA
                 </Link>
               </li>
-
               <li className="nav-item ms-2">
                 <Link
                   className={
@@ -67,7 +70,6 @@ export default function Navbar() {
                   <i className="fa fa-user-circle"></i> APARATURS
                 </Link>
               </li>
-
               <li className="nav-item ms-2">
                 <Link
                   className={
@@ -80,7 +82,6 @@ export default function Navbar() {
                   <i className="fa fa-book"></i> BERITA
                 </Link>
               </li>
-
               <li className="nav-item ms-2">
                 <Link
                   className={
@@ -93,7 +94,6 @@ export default function Navbar() {
                   <i className="fa fa-shopping-bag"></i> PRODUK DESA
                 </Link>
               </li>
-
               <li className="nav-item ms-2">
                 <Link
                   className={
@@ -114,25 +114,6 @@ export default function Navbar() {
       <div className="jumbotron-header pb-3">
         <div className="container">
           <div className="row">
-            <div className="col-md-9 d-none d-md-block d-lg-block">
-              <div className="header-logo">
-                <a href="#">
-                  <img
-                    src="/images/logo-jbg.png"
-                    width="110"
-                    className="img-responsive"
-                  />
-                </a>
-              </div>
-              <div className="header-text">
-                <h2 className="header-school">PP FGI SUMUT</h2>
-                <hr />
-                <div className="header-address">
-                  Jln. Tegal Sari Desa Laut Dendang
-                </div>
-              </div>
-            </div>
-
             <div className="row d-block d-md-none d-lg-none">
               <div className="col-md-6 text-center mt-3">
                 <a href="#">
@@ -140,15 +121,15 @@ export default function Navbar() {
                     src="/images/logo-jbg.png"
                     width="110"
                     className="img-responsive"
+                    alt="Logo"
                   />
                 </a>
               </div>
               <div className="col-md-12 text-center text-white mb-3">
                 <h2 className="header-school">PP FGI SUMUT</h2>
                 <hr />
-                <div className="header-address">
-                Jln. Tegal Sari Desa Laut Dendang
-                </div>
+                <div className="header-address">Pengurus Provinsi Forum GenRe Indonesia</div>
+                <div className="header-address">Sumatera Utara</div>
               </div>
             </div>
 
@@ -157,27 +138,11 @@ export default function Navbar() {
                 className="d-none d-md-block d-lg-block"
                 style={{ marginTop: "60px" }}
               ></div>
-              <form
-                className="d-flex"
-                action="#"
-                method="GET"
-              >
-                <input
-                  className="form-control border-0 me-2"
-                  type="search"
-                  name="q"
-                  placeholder="cari sesuatu..."
-                  aria-label="Search"
-                />
-                 <button className="btn btn-primary-dark" type="submit" style={{ backgroundColor: '#003285',borderColor: '#003285',color: 'white' }}>
-                  CARI
-                </button>
-              </form>
+              <form className="d-flex" action="#" method="GET"></form>
             </div>
           </div>
         </div>
       </div>
-      
     </>
   );
 }

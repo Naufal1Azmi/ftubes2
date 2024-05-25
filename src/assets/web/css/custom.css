@@ -14,7 +14,8 @@
 
 .header-school {
     font-weight: bold;
-    margin-top: 25px;
+    padding-left: 8px;
+    padding-top: 10px;
 }
 
 .navbar-top {
@@ -28,7 +29,7 @@
 }
 
 .nav-link {
-    color: white!important;
+    color: white !important;
     border-radius: .3rem;
 }
 
@@ -39,7 +40,6 @@
 }
 
 .navbar-nav .nav-link {
-    /* margin-top: 10px; */
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -107,17 +107,20 @@
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* .navbar {
-    padding-top: 0px !important;
-} */
-
 .text-green {
-    color: #2A629A!important;
+    color: #2A629A !important;
 }
 
-.carousel-custom{z-index:9;background:#fff;border:none;border-radius:50%;padding:10px;width:22px}
+.carousel-custom {
+    z-index: 9;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    width: 22px;
+}
 
 .post-content p {
-    margin-bottom: 0px!important;
+    margin-bottom: 0px !important;
     font-size: 18px;
 }
